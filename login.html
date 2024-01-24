@@ -10,18 +10,21 @@
 
 <div class="container">
   <h2>Login</h2>
-  <form id="loginForm">
+  <form id="loginForm" onsubmit="return validateLoginForm()"">
     <label  for="loginUsername">Username</label>
-    <input placeholder="Min 8 characters" type="text" id="loginUsername" name="loginUsername" required minlength="8">
+    <input type="text" id="loginUsername" name="loginUsername" required>
 
     <label for="loginPassword">Password</label>
-    <input placeholder="Min 8 characters, including letters and numbers" type="password" id="loginPassword" name="loginPassword" required minlength="8">
+    <input type="password" id="loginPassword" name="loginPassword" required>
 
     <button type="submit">Login</button>
+    <p class="error" id="loginError"></p>
   </form>
 
   <p>Don't have an account? <a href="signup.html">Sign up</a></p>
 </div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
